@@ -1,0 +1,74 @@
+
+1. O que é pip?
+
+O pip é o instalador de bibliotecas do Python.
+
+Por exemplo, podemos instalar a biblioteca requests, usada para acessar APIs:
+
+comando -> python -m pip install requests
+
+
+2. O que é um ambiente virtual?
+
+O venv cria um ambiente separado para cada projeto.
+
+Assim:
+
+O projeto A pode usar uma versão de uma biblioteca.
+O projeto B pode usar outra versão.
+As dependências não ficam misturadas.
+
+Na prática, cada projeto Python deve ter seu próprio ambiente virtual.
+
+
+3. Criando o ambiente virtual
+
+Abra o terminal dentro da pasta do projeto e execute:
+
+comando - > python -m venv .venv
+
+Será criada uma pasta chamada .venv.
+
+Caso o comando python não funcione no Windows, tente:
+
+-> py -m venv .venv
+
+
+
+4. Ativando no Windows
+
+No PowerShell:python
+
+comando - > .\.venv\Scripts\Activate.ps1
+
+No Prompt de Comando, o CMD:
+
+comando -> .venv\Scripts\activate.bat
+
+Quando funcionar, aparecerá algo semelhante no terminal:
+
+(.venv) C:\meu-projeto>*
+
+Isso significa que o ambiente está ativo.
+
+
+5. Instalando uma biblioteca
+
+Com o ambiente ativado:
+
+comando -> python -m pip install requests
+
+Para verificar as bibliotecas instaladas:
+
+comando -> python -m pip list
+
+
+7. Arquivo de dependências
+
+Para registrar as bibliotecas utilizadas no projeto:
+
+ -m pip freeze > requirements.txt
+
+Outra pessoa poderá instalar tudo usando:
+
+python -m pip install -r requirements.txt
