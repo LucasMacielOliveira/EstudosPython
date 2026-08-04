@@ -34,7 +34,6 @@ print(pessoa.nome)
 
 #------------------------------------------------------------------------------------#
 
-
 class ContaBancaria:
     def __init__(self, saldo_inical, titular):
         self._saldo = saldo_inical
