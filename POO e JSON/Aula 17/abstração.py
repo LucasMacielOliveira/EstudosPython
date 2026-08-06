@@ -53,3 +53,20 @@
 # Pense no @abstractmethod como um CONTRATO:
 # "Se você herdar desta classe, precisa implementar este comportamento."
 # ============================================================
+
+
+from abc import ABC, abstractmethod # isso quer dizer que a classe Equipamento é uma classe abstrata, e não pode ser instanciada diretamente. Ela serve como um modelo para outras classes que herdam dela.
+
+
+class Equipamento(ABC):
+
+    def __init__(self, nome, valor_diaria):
+        self.nome = nome
+        self.valor_diaria = valor_diaria
+
+    @abstractmethod
+    def exibir_dados(self):
+        pass
+
+    def calcular_aluguel(self, dias):
+        return self.valor_diaria * dias
